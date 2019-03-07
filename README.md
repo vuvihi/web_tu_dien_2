@@ -13,7 +13,7 @@
     * Hỗ trợ tra cứu từ điển Anh - Việt
 
 3. **Các tài nguyên sử dụng:**
-    * [Theme Boostrap free from StartBoostrap](https://github.com/BlackrockDigital/startbootstrap-landing-page)
+    * [Theme Boostrap Landing Page free from StartBoostrap](https://github.com/BlackrockDigital/startbootstrap-landing-page)
     * [Domain free from Freenom](https://www.freenom.com/en/index.html)
     * [Hosting free from 000webhost](https://www.000webhost.com/)
     * [Database source](http://www.informatik.uni-leipzig.de/~duc/Dict/)
