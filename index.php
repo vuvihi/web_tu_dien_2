@@ -45,7 +45,24 @@
 									<input id="bol" type="hidden" name="bol" value="true">
 								</div>
 								<div class="col-12 col-md-3">
-									<button type="submit" class="btn btn-block btn-lg btn-primary"><i class="fas fa-volume-up"></i></button>
+									<button type="button" onclick="play()" class="btn btn-block btn-lg btn-primary"><i class="fas fa-volume-up"></i></button>
+									<?php
+									if($bol != '')
+									{
+										$src = "'sound/".$input.".mp3'";
+										echo "<audio id='audio' src= $src>";
+									}
+									else
+										echo "<audio id='audio' src= 'sound/default_sound.mp3'>";
+									?>
+										Your browser does not support HTML5 video.
+									</audio>
+									<script>
+										var sound = document.getElementById("audio");
+									  function play(){  
+										    sound.play(); 
+									  }  
+									</script>
 								</div>
 							</div>
 						</form>
@@ -55,11 +72,11 @@
 				if($bol != '')
 				{
 				echo '<div class="card" style="color: #fff;background-color: white;">';
-						echo '<div class="card-body">';
-								if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
-						echo '</div></div>';
-						}
-					?>
+				echo '<div class="card-body">';
+				if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
+				echo '</div></div>';
+				}
+				?>
 				</div>
 			</header>
 			<!-- Footer -->
