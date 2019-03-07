@@ -20,7 +20,7 @@ echo
 </script>";
 ?>
 
-<title>Demo Từ điển online</title>
+<title>Từ điển online</title>
 
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
