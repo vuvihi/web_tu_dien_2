@@ -10,14 +10,10 @@
 		<link rel="shortcut icon" href="img/icon.png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<?php
-		$bol=!empty($_POST['bol'])?$_POST['bol']:'';
-		if($bol == '')
-		echo
-		"<script>
-		$(document).ready(function(){
-		$('.card').hide();
-		})
-		</script>";
+		include 'thu_vien.php';
+$input=!empty($_POST['input'])?$_POST['input']:'';
+$start=!empty($_POST['start'])?$_POST['start']:'';
+$end=!empty($_POST['end'])?$_POST['end']:'';
 		?>
 		<title>Từ điển online</title>
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,11 +53,13 @@
 				<div class="card" style="color: #fff;background-color: white;">
 					<div class="card-body">
 						<?php
-						include 'thu_vien.php';
-						$input=!empty($_POST['input'])?$_POST['input']:'';
-						$start=!empty($_POST['start'])?$_POST['start']:'';
-						$end=!empty($_POST['end'])?$_POST['end']:'';
-						if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
+						 if($bol != '')
+          {
+            echo '<div class="card" style="color: #fff;background-color: white;">';
+            echo '<div class="card-body">';
+            if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
+            echo '</div></div>';
+          }
 						?>
 					</div>
 				</div>
