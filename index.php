@@ -55,10 +55,10 @@
 				if($bol != '')
 				{
 				echo '<div class="card" style="color: #fff;background-color: white;">';
-							echo '<div class="card-body">';
-										if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
-							echo '</div></div>';
-							}
+						echo '<div class="card-body">';
+								if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
+						echo '</div></div>';
+						}
 					?>
 				</div>
 			</header>
