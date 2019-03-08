@@ -94,6 +94,115 @@ function giai_ma($string)
 
 $fp = fopen('means.dict', "r");
 
+function font(&$string)
+{
+	$arr = (explode("\n",trim($string)));
+	$mean = '<center><big><b style="color:red;">'.array_shift($arr).'</b></big></center><br><ul>';
+	foreach ($arr as $key => $value) {
+		if(strpos($value, '+') !== False) $value = str_replace('+','</b> : <b style="color:#0000FF;">',$value).'</b>';
+		if($key == count($arr)-1)
+		{
+			if($value[0] == '*')
+			{
+				$tmp = substr($value,1);
+				$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+			}
+			elseif($value[0] == '!')
+			{
+				$tmp = substr($value,1);
+				$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+			}
+			elseif($value[0] == '-')
+			{
+				$tmp = substr($value,1);
+				$mean = $mean.'<li><b>'.$tmp.'</b></li></ul></li>';
+			}
+			else
+			{
+				$tmp = substr($value,1);
+				$mean = $mean.'<li><b style="color:#660066;">'.$tmp.'</b></li></ul></li></ul></li>';
+			}
+		}
+		else
+		{
+			if($value[0] == '*')
+			{
+				if($arr[$key+1][0] == '!')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+				}
+				if($arr[$key+1][0] == '-')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b><ul>';
+				}
+				else
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+				}
+			}
+			elseif($value[0] == '!')
+			{
+				if($arr[$key+1][0] == '*')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#FF6600;">'.$tmp.'</b></li>';
+				}
+				if($arr[$key+1][0] == '-')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#FF6600;">'.$tmp.'</b><ul>';
+				}
+				else
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#FF6600;">'.$tmp.'</b></li>';
+				}
+			}
+			elseif($value[0] == '-')
+			{
+				if($arr[$key+1][0] == '*' || $arr[$key+1][0] == '!')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b>'.$tmp.'</b></li></ul></li>';
+				}
+				elseif($arr[$key+1][0] == '=')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b>'.$tmp.'</b><ul>';
+				}
+				else
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b>'.$tmp.'</b></li>';
+				}
+			}
+			elseif($value[0] == '=')
+			{
+				if($arr[$key+1][0] == '*' || $arr[$key+1][0] == '!')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#660066;">'.$tmp.'</b></li></ul></li></ul></li>';
+				}
+				elseif($arr[$key+1][0] == '-')
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#660066;">'.$tmp.'</b></li></ul></li>';
+				}
+				else
+				{
+					$tmp = substr($value,1);
+					$mean = $mean.'<li><b style="color:#660066;">'.$tmp.'</b></li>';
+				}
+			}
+		}
+	}
+	$mean = $mean.'</ul>';
+	return $mean;
+}
+
 function get_mean($str_start, $str_end)
 {	
 	GLOBAL $fp;
@@ -105,7 +214,7 @@ function get_mean($str_start, $str_end)
 	{
 		$mean = $mean.fgets($fp);
 	}
-	return $mean;
+	return font($mean);
 }
 
 function make_index_file()
