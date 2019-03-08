@@ -226,7 +226,7 @@ function make_index_file()
 	$pointer = array();
 
 	//Từ điển giao tiếp
-	while(!feof($fp) && ftell($fp)<10903182)
+	while(!feof($fp) && ftell($fp)<10903134)
 	{
 		if(fgetc($fp) == '@')
 		{
@@ -244,7 +244,7 @@ function make_index_file()
 	}
 
 	//Từ điển chuyên ngành
-	fseek($fp, 10903182);
+	fseek($fp, 10903134);
 	while(!feof($fp))
 	{
 		if(fgetc($fp) == '@')

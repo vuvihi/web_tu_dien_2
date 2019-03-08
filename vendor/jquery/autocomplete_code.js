@@ -49,85 +49,85 @@ function autocomplete(start, end, inp, arr) {
       switch (val.charAt(0).toUpperCase())
       {
         case 'A':
-            {index(43, 6246);}
+            {index(17, 3620);}
             break;
         case 'B':
-            {index(6246, 10300);}
+            {index(3620, 6252);}
             break;
         case 'C':
-            {index(10300, 18578);}
+            {index(6252, 10912);}
             break;
         case 'D':
-            {index(18578, 23816);}
+            {index(10912, 14315);}
             break;
         case 'E':
-            {index(23816, 28139);}
+            {index(14315, 16711);}
             break;
         case 'F':
-            {index(28139, 32385);}
+            {index(16711, 19464);}
             break;
         case 'G':
-            {index(32385, 35479);}
+            {index(19464, 21080);}
             break;
         case 'H':
-            {index(35479, 38852);}
+            {index(21080, 23267);}
             break;
         case 'I':
-            {index(38852, 43437);}
+            {index(23267, 26664);}
             break;
         case 'J':
-            {index(43437, 44144);}
+            {index(26664, 27139);}
             break;
         case 'K':
-            {index(44144, 44909);}
+            {index(27139, 27603);}
             break;
         case 'L':
-            {index(44909, 47759);}
+            {index(27603, 29514);}
             break;
         case 'M':
-            {index(47759, 51717);}
+            {index(29514, 32098);}
             break;
         case 'N':
-            {index(51717, 53283);}
+            {index(32098, 33169);}
             break;
         case 'O':
-            {index(53283, 56376);}
+            {index(33169, 35048);}
             break;
         case 'P':
-            {index(56376, 65832);}
+            {index(35048, 39874);}
             break;
         case 'Q':
-            {index(65832, 66372);}
+            {index(39874, 40182);}
             break;
         case 'R':
-            {index(66372, 70558);}
+            {index(40182, 42584);}
             break;
         case 'S':
-            {index(70558, 82593);}
+            {index(42584, 50288);}
             break;
         case 'T':
-            {index(82593, 87040);}
+            {index(50288, 53025);}
             break;
         case 'U':
-            {index(87040, 91425);}
+            {index(53025, 55491);}
             break;
         case 'V':
-            {index(91425, 93079);}
+            {index(55491, 56425);}
             break;
         case 'W':
-            {index(93079, 95033);}
+            {index(56425, 57778);}
             break;
         case 'X':
-            {index(95033, 95086);}
+            {index(57778, 57808);}
             break;
         case 'Y':
-            {index(95086, 95277);}
+            {index(57808, 57957);}
             break;
         case 'Z':
-            {index(95277, 95437);}
+            {index(57957, 58063);}
             break;
         default:
-            {index(0, 43);}
+            {index(0, 17);}
       };
   });
   /*execute a function presses a key on the keyboard:*/
