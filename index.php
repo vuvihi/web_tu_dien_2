@@ -49,6 +49,7 @@
 									<?php
 									if($bol != '')
 									{
+										if(strpos($input,'/') !== False) $input = str_replace('/',',',$input);
 										$src = "'sound/".$input.".mp3'";
 										echo "<audio id='audio' src= $src>";
 									}

@@ -105,12 +105,12 @@ function font(&$string)
 			if($value[0] == '*')
 			{
 				$tmp = substr($value,1);
-				$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+				$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 			}
 			elseif($value[0] == '!')
 			{
 				$tmp = substr($value,1);
-				$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+				$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 			}
 			elseif($value[0] == '-')
 			{
@@ -130,17 +130,17 @@ function font(&$string)
 				if($arr[$key+1][0] == '!')
 				{
 					$tmp = substr($value,1);
-					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+					$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 				}
 				if($arr[$key+1][0] == '-')
 				{
 					$tmp = substr($value,1);
-					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b><ul>';
+					$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b><ul>';
 				}
 				else
 				{
 					$tmp = substr($value,1);
-					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+					$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 				}
 			}
 			elseif($value[0] == '!')
@@ -220,7 +220,6 @@ function get_mean($str_start, $str_end)
 function make_index_file()
 {
 	GLOBAL $fp;
-	$write = @fopen('vendor\jquery\autocomplete.js', "w+");
 	$words = array();
 	$start_point = array();
 	$index = array();
@@ -279,6 +278,7 @@ function make_index_file()
 
 	//return $pointer;
 
+	$write = @fopen('vendor\jquery\autocomplete.js', "w+");
 	fwrite($write, 'var words = [');
 	$i=0;
 	foreach ($pointer as $key => $value) {

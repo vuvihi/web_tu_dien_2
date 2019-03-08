@@ -1,6 +1,5 @@
 function autocomplete(start, end, inp, arr) {
-  /*the autocomplete function takes two arguments,
-  the text field element and an array of possible autocompleted values:*/
+
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function(e) {
@@ -28,7 +27,7 @@ function autocomplete(start, end, inp, arr) {
             b.innerHTML = "<strong>" + arr[i][0].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i][0].substr(val.length);
             /*insert a input field that will hold the current array item's value:*/
-            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            b.innerHTML += '<input type="hidden" value="' + arr[i] + '">';
             /*execute a function when someone clicks on the item value (DIV element):*/
             b.addEventListener("click", function(e) {
                 /*insert the value for the autocomplete text field:*/
