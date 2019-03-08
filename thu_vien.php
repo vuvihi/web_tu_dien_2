@@ -105,12 +105,12 @@ function font(&$string)
 			if($value[0] == '*')
 			{
 				$tmp = substr($value,1);
-				$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+				$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 			}
 			elseif($value[0] == '!')
 			{
 				$tmp = substr($value,1);
-				$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+				$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 			}
 			elseif($value[0] == '-')
 			{
@@ -130,17 +130,17 @@ function font(&$string)
 				if($arr[$key+1][0] == '!')
 				{
 					$tmp = substr($value,1);
-					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+					$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 				}
 				if($arr[$key+1][0] == '-')
 				{
 					$tmp = substr($value,1);
-					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b><ul>';
+					$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b><ul>';
 				}
 				else
 				{
 					$tmp = substr($value,1);
-					$mean = $mean.'<li><b style="color:#222222;">'.$tmp.'</b></li>';
+					$mean = $mean.'<li><b style="color:green;">'.$tmp.'</b></li>';
 				}
 			}
 			elseif($value[0] == '!')
