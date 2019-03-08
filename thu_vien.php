@@ -220,7 +220,6 @@ function get_mean($str_start, $str_end)
 function make_index_file()
 {
 	GLOBAL $fp;
-	$write = @fopen('vendor\jquery\autocomplete.js', "w+");
 	$words = array();
 	$start_point = array();
 	$index = array();
@@ -279,6 +278,7 @@ function make_index_file()
 
 	//return $pointer;
 
+	$write = @fopen('vendor\jquery\autocomplete.js', "w+");
 	fwrite($write, 'var words = [');
 	$i=0;
 	foreach ($pointer as $key => $value) {
