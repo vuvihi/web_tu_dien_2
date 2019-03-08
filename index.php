@@ -16,7 +16,7 @@
 		$start=!empty($_POST['start'])?$_POST['start']:'';
 		$end=!empty($_POST['end'])?$_POST['end']:'';
 		?>
-		<title>Demo Từ điển online</title>
+		<title>Từ điển Online</title>
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
