@@ -1,4 +1,4 @@
-# [Dự án Website tra cứu từ điển - 323+](https://github.com/vuvihi/demotudienonline)
+# [Dự án Website tra cứu từ điển - 323+](https://github.com/vuvihi/web_tu_dien)
 ## Link to Website: [Link 1](http://webtudien.tk/) [Link 2](https://tu-dien-online.000webhostapp.com/)
 #### Bài tập hỗ trợ học tập môn Quản lý dự án các hệ thống thông tin - Giảng viên: PGS.TS Nguyễn Ngọc Hoá
 
