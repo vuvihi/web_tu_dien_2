@@ -22,7 +22,9 @@ function autocomplete(start, end, inp, arr) {
           /*check if the item starts with the same letters as the text field value:*/
           if (arr[i][0].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
             /*create a DIV element for each matching element:*/
-            b = document.createElement("DIV");
+            b = document.createElement("DIV"); 
+            b.setAttribute('data-toggle', 'tooltip');
+            b.setAttribute('title', 'Chọn để dịch');
             /*make the matching letters bold:*/
             b.innerHTML = "<strong>" + arr[i][0].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i][0].substr(val.length);
