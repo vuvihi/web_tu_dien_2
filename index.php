@@ -92,7 +92,7 @@
 						<div class="col-lg-6 h-100 text-center text-lg-right my-auto">
 							<ul class="list-inline mb-0">
 								<li class="list-inline-item">
-									<a href="https://github.com/vuvihi/demotudienonline" data-toggle="tooltip" title="Tất cả trên Github!">
+									<a href="https://github.com/vuvihi/web_tu_dien" data-toggle="tooltip" title="Tất cả trên Github!">
 										<i class="fab fa-github fa-2x fa-fw"></i>
 									</a>
 								</li>
