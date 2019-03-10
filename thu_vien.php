@@ -276,7 +276,7 @@ function make_index_file()
 
 	ksort($pointer);
 
-	//return $pointer;
+	return $pointer;
 
 	$write = @fopen('vendor\jquery\autocomplete.js', "w+");
 	fwrite($write, 'var words = [');
@@ -301,27 +301,55 @@ function is_alpha($string)
 	$bool = True;
 	for($i=0; $i<strlen($string); $i++)
 	{
-		if(IntlChar::isalpha($string[$i]) !== True && IntlChar::isblank($string[$i]) !== True)
+		if(IntlChar::isalpha($string[$i]) !== True && IntlChar::isblank($string[$i]) !== True && $string[$i] !== '-' && $string[$i] !== "'" && $string[$i] !== '.' && $string[$i] !== '(' && $string[$i] !== ')' && $string[$i] !== ',' && IntlChar::isalnum($string[$i]) !== True)
 		{
+			//echo ord($string[$i]).'<br>';
 			$bool = False;
 		}
 	}
 	return $bool;
 }
 
-/*$poi = make_index_file();
-$file = @fopen('D:\file.txt', 'w+');
-$i = 0;
-foreach ($poi as $key => $value) {
-	if(strpos($key, '/') !== False)
+function fix($string)
+{
+	for ($i=0; $i < strlen($string); $i++)
 	{
-		$key = str_replace('/', ',', $key);
+		if(ord($string[$i]) == 195)
+		{
+			$string[$i]='1';
+			$string[$i+1]='1';
+		}
+	}
+	return $string;
+}
+
+/*
+$poi = make_index_file();
+//$file = @fopen('D:\file.txt', 'w+');
+
+$file = @fopen('D:\err.txt', 'w+');
+$i = 1;
+foreach ($poi as $key => $value) {
+	//$key = fix_2($key);
+	if(is_alpha($key) === False)
+	{
 		echo "$i: ".$key.'<br>';
+		//fwrite($file, $key."\n");
+		$i++;
 	}
 	
-	fwrite($file, $key."\n");
-	$i++;
+	//fwrite($file, $key."\n");
+	
 }*/
+
+//Sửa lỗi font_name
+/*foreach (glob("D:/sound/*.mp3") as $filename) {
+	$old_name = substr($filename, 9);
+	$new_name = 'D:/sound/'.fix($old_name);
+	rename($filename, $new_name); 
+}*/
+
+
 //make_index_file();
 
 ?>
