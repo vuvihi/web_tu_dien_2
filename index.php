@@ -51,7 +51,7 @@
 									if($bol != '')
 									{
 										$mp3_file = fix($input);
-										$src = "'sound/".$mp3_file.".mp3'";
+										$src = "'https://raw.githubusercontent.com/vuvihi/web_tu_dien/master/sound/".$input.".mp3'";
 										echo "<audio id='audio' src= $src>";
 									}
 									else
