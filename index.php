@@ -17,7 +17,7 @@
 		$start=!empty($_POST['start'])?$_POST['start']:'';
 		$end=!empty($_POST['end'])?$_POST['end']:'';
 		?>
-		<title>Từ điển Online</title>
+		<title>Từ điển trực tuyến</title>
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
@@ -50,62 +50,62 @@
 									<?php
 									if($bol != '')
 									{
-										$mp3_file = fix($input);
+										if(strpos($input,'/') !== False) $input = str_replace('/',',',$input);
 										$src = "'https://raw.githubusercontent.com/vuvihi/web_tu_dien/master/sound/".$input.".mp3'";
 										echo "<audio id='audio' src= $src>";
-									}
-									else
-										echo "<audio id='audio' src= 'sound/default_sound.mp3'>";
-									?>
-										Trình duyệt của bạn không hỗ trợ phát âm thanh!
-									</audio>
-									<script>
-										var sound = document.getElementById("audio");
-									  function play(){  
-										    sound.play(); 
-									  }  
-									</script>
+										}
+										else
+											echo "<audio id='audio' src= 'sound/default_sound.mp3'>";
+											?>
+											Trình duyệt của bạn không hỗ trợ phát âm thanh!
+										</audio>
+										<script>
+											var sound = document.getElementById("audio");
+										function play(){
+											sound.play();
+										}
+										</script>
+									</div>
 								</div>
+							</form>
+						</div>
+					</div>
+					<?php
+					if($bol != '')
+					{
+					echo '<div class="card" style="color: #fff;background-color: white;text-align: left">';
+						echo '<div class="card-body">';
+							if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
+						echo '</div></div>';
+						}
+						?>
+					</div>
+				</header>
+				<!-- Footer -->
+				<footer class="footer bg-light">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+								<p class="text-muted small mb-4 mb-lg-0" data-toggle="tooltip" title="Sản phẩm của nhóm 323+!" style="
+								cursor: default;">&copy; A Project from 323+</p>
 							</div>
-						</form>
-					</div>
-				</div>
-				<?php
-				if($bol != '')
-				{
-				echo '<div class="card" style="color: #fff;background-color: white;text-align: left">';
-				echo '<div class="card-body">';
-				if($input != '') echo '<font color="black">'.get_mean($start, $end).'</font>';
-				echo '</div></div>';
-				}
-				?>
-				</div>
-			</header>
-			<!-- Footer -->
-			<footer class="footer bg-light">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-							<p class="text-muted small mb-4 mb-lg-0" data-toggle="tooltip" title="Sản phẩm của nhóm 323+!" style="
-    cursor: default;">&copy; A Project from 323+</p>
-						</div>
-						<div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-							<ul class="list-inline mb-0">
-								<li class="list-inline-item">
-									<a href="https://github.com/vuvihi/web_tu_dien" data-toggle="tooltip" title="Tất cả trên Github!">
-										<i class="fab fa-github fa-2x fa-fw"></i>
-									</a>
-								</li>
-							</ul>
+							<div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+								<ul class="list-inline mb-0">
+									<li class="list-inline-item">
+										<a href="https://github.com/vuvihi/demotudienonline" data-toggle="tooltip" title="Tất cả trên Github!">
+											<i class="fab fa-github fa-2x fa-fw"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-			</footer>
-			<!--Make sure the form has the autocomplete function switched off:-->
-			<script src="vendor/jquery/autocomplete.js"></script>
-			<script src="vendor/jquery/autocomplete_code.js"></script>
-			<!-- Bootstrap core JavaScript -->
-			<script src="vendor/jquery/jquery.min.js"></script>
-			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		</body>
-	</html>
+				</footer>
+				<!--Make sure the form has the autocomplete function switched off:-->
+				<script src="vendor/jquery/autocomplete.js"></script>
+				<script src="vendor/jquery/autocomplete_code.js"></script>
+				<!-- Bootstrap core JavaScript -->
+				<script src="vendor/jquery/jquery.min.js"></script>
+				<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+			</body>
+		</html>
