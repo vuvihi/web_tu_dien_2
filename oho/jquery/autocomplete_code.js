@@ -18,7 +18,9 @@ function autocomplete(start, end, inp, arr) {
       /*for each item in the array...*/
       function index(s, e)
       {
-        for (i = s; i < e; i++) {
+        max=e;
+        if((s+100)>=e) max=s+100;
+        for (i = s; i < max; i++) {
           /*check if the item starts with the same letters as the text field value:*/
           if (arr[i][0].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
             /*create a DIV element for each matching element:*/
