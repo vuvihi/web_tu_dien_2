@@ -278,7 +278,7 @@ function make_index_file()
 
 	return $pointer;
 
-	$write = @fopen('aho\jquery\autocomplete.js', "w+");
+	$write = @fopen('oho\jquery\autocomplete.js', "w+");
 	fwrite($write, 'var words = [');
 	$i=0;
 	foreach ($pointer as $key => $value) {
