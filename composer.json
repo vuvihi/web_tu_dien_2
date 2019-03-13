@@ -5,13 +5,12 @@
      "chmod -R 777 /css/",
      "chmod -R 777 /vendor/"
  ]
- {
+
     "extra": {
         "heroku": {
             "compile": [
                 "chmod 777 /css/"
             ]
         }
-    }
 }
 }
