@@ -9,7 +9,7 @@
 		<meta name="author" content="Thực hiện bởi nhóm 323+">
 		<link rel="shortcut icon" href="img/icon.png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="vendor/jquery/pace.min.js"></script>
+		<script src="aho/jquery/pace.min.js"></script>
 		<?php
 		$bol=!empty($_POST['bol'])?$_POST['bol']:'';
 		include 'thu_vien.php';
@@ -18,9 +18,9 @@
 		$end=!empty($_POST['end'])?$_POST['end']:'';
 		?>
 		<title>Từ điển trực tuyến</title>
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+		<link href="aho/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="aho/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="aho/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 		<link href="css/landing-page.min.css" rel="stylesheet">
 	</head>
@@ -102,10 +102,10 @@
 					</div>
 				</footer>
 				<!--Make sure the form has the autocomplete function switched off:-->
-				<script src="vendor/jquery/autocomplete.js"></script>
-				<script src="vendor/jquery/autocomplete_code.js"></script>
+				<script src="aho/jquery/autocomplete.js"></script>
+				<script src="aho/jquery/autocomplete_code.js"></script>
 				<!-- Bootstrap core JavaScript -->
-				<script src="vendor/jquery/jquery.min.js"></script>
-				<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+				<script src="aho/jquery/jquery.min.js"></script>
+				<script src="aho/bootstrap/js/bootstrap.bundle.min.js"></script>
 			</body>
 		</html>
