@@ -1,9 +1,8 @@
 {
   "scripts": {
     "compile": [
-      "chmod -R 777 var/",
-      "chmod 755 etc/",
-      "chmod 644 etc/config.php"
+      "chmod -R 777 css/",
+      "chmod 777 vendor/"
     ]
   }
 }
